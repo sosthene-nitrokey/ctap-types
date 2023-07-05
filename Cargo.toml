@@ -29,6 +29,7 @@ log-none = []
 [dev-dependencies]
 hex = "0.4.3"
 quickcheck = "1.0.3"
+serde = { version = "1" }
 
 # [patch.crates-io]
 # heapless = { git = "https://github.com/nickray/heapless", branch = "bytebuf-0.5.6" }
