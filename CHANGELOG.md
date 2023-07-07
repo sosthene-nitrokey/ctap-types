@@ -9,8 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
   content ([#9][])
 - Truncate overlong `name` and `displayName` values for
   `PublicKeyCredentialEntity` instances ([#30][])
+- Send empty response to clientPin instead of empty map ([#13][])
 
 [#9]: https://github.com/solokeys/ctap-types/issues/9
+[#13]: https://github.com/solokeys/ctap-types/issues/13
 [#30]: https://github.com/solokeys/fido-authenticator/issues/30
 
 ## [0.1.2] - 2022-03-07
