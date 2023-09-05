@@ -257,6 +257,17 @@ pub struct PublicKeyCredentialDescriptor {
     // transports: ...
 }
 
+#[derive(Clone, Debug, Eq, PartialEq, Serialize, Deserialize)]
+#[serde(rename_all = "camelCase")]
+/// Same as PublicKeyCredentialDescriptor but which deserializes using references
+pub struct PublicKeyCredentialDescriptorRef<'a> {
+    pub id: &'a serde_bytes::Bytes,
+    #[serde(rename = "type")]
+    pub key_type: &'a str,
+    // https://w3c.github.io/webauthn/#enumdef-authenticatortransport
+    // transports: ...
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
