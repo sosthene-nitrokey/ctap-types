@@ -73,8 +73,7 @@ pub struct Request {
     pub client_data_hash: Bytes<32>,
     pub rp: PublicKeyCredentialRpEntity,
     pub user: PublicKeyCredentialUserEntity,
-    // e.g. webauthn.io sends 10
-    pub pub_key_cred_params: Vec<PublicKeyCredentialParameters, 12>,
+    pub pub_key_cred_params: FilteredPublicKeyCredentialParameters,
     #[serde(skip_serializing_if = "Option::is_none")]
     pub exclude_list: Option<Vec<PublicKeyCredentialDescriptor, 16>>,
     #[serde(skip_serializing_if = "Option::is_none")]
